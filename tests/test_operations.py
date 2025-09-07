@@ -1,7 +1,7 @@
-from src.maths import add, sub
+from src.maths import app
 
-def test_add():
-    assert add(2,3)==5
+def test_home():
+    reponse = app.test_client.get("/")
 
-def test_sub():
-    assert sub(2,3)==-1
+    assert reponse.status_code == 200
+    assert response.data == b"Hello World!"
